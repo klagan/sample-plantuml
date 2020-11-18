@@ -1,6 +1,6 @@
 # Description
 
-This repository is an example of techinques to employ in `PlantUML`
+This repository is an example of techniques to employ in `PlantUML`
 
 I only have the example of `skins` and multiple diagrams in a single `.puml` file.
 
