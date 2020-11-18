@@ -1,0 +1,83 @@
+@startuml first
+
+skinparam BackgroundColor #ffffff
+
+skinparam usecase {
+    BackgroundColor<< c1 >> LightGreen 
+    BorderColor<< c1 >> Green
+    ArrowColor<< c1 >> Green 
+
+    BackgroundColor<< a1 >> LightBlue
+    BorderColor<< a1 >> Blue
+    ArrowColor<< a1 >> Blue
+    
+    BackgroundColor<< a2 >> Salmon
+    BorderColor<< a2 >> Red
+    ArrowColor<< a2 >> Red
+    ArrowThickness 2
+}
+
+skinparam {
+    ArrowFontStyle bold
+    ArrowFontColor red
+    ArrowFontSize 12 
+}
+
+package "a package" #FFE5D9 {
+   rectangle "a container" {
+    usecase "a use case" << a1 >> as a1
+    usecase "another use case" << a2 >> as a2
+  }
+
+  rectangle "another\ncontainer" {
+    usecase "another use case" << c1 >> as c1
+  }
+}
+
+actor me
+
+me --> a1 << a1 >> : "do something"
+
+@enduml
+
+@startuml second
+
+skinparam BackgroundColor #ffffff
+
+skinparam usecase {
+    BackgroundColor<< c1 >> LightGreen 
+    BorderColor<< c1 >> Green
+    ArrowColor<< c1 >> Green 
+
+    BackgroundColor<< a1 >> LightBlue
+    BorderColor<< a1 >> Blue
+    ArrowColor<< a1 >> Blue
+    
+    BackgroundColor<< a2 >> Salmon
+    BorderColor<< a2 >> Red
+    ArrowColor<< a2 >> Red
+    ArrowThickness 2
+}
+
+skinparam {
+    ArrowFontStyle bold
+    ArrowFontColor red
+    ArrowFontSize 12 
+}
+
+package "a package" #FFE5D9 {
+   rectangle "a container" {
+    usecase "a use case" << a1 >> as a1
+    usecase "another use case" << a2 >> as a2
+  }
+
+  rectangle "another\ncontainer" {
+    usecase "another use case" << c1 >> as c1
+  }
+}
+
+actor me
+
+me --> c1 << c1 >> : "do something else"
+
+@enduml
